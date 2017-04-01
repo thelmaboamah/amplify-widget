@@ -1,6 +1,5 @@
 console.log("Sanity check, app is connected!");
 
-
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyBrqBQm5A-fpj5iF7IGt51tK206Ud4aEGg",
