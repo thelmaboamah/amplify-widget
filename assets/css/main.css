@@ -91,6 +91,9 @@ a:hover {
 
 .flash-message {
 	display: none;
+	font-weight: 600;
+	color: #304269;
+	padding: 3px;
 }
 
 .action-buttons .btn {
