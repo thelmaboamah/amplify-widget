@@ -1,0 +1,15 @@
+.container-fluid {
+font-family: 'Montserrat', sans-serif;
+font-size: 16px;
+
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.iframe {
+  width: 1000px;
+  margin: 0 auto;
+}
