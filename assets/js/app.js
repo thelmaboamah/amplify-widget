@@ -29,14 +29,38 @@ $(document).ready(function(){
 		    var actionDiv = `
 		    <div class="card">
 		      <div class="card-header" role="tab" id="heading${++id}">
-	          <div data-toggle="collapse" data-parent="#accordion" href="#collapse${id}" aria-expanded="false" aria-controls="collapse${id}">
-	            ${currentAction.verbPreTitle}
+	          <div class="row" data-toggle="collapse" data-parent="#accordion" href="#collapse${id}" aria-controls="collapse${id}">
+							<div class="col-md-1">
+								<i class="fa fa-phone" aria-hidden="true"></i>
+							</div>
+							<div class="col-md-10">
+								<p class="pre-title">
+									${currentAction.verbPreTitle}
+								</p>
+								<p class="title">
+									${currentAction.verbTitle}
+								</p>
+							</div>
+							<div class="col-md-1">
+								<i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+							</div>
+
+	            
 	          </div>
 		      </div>
 
 		      <div id="collapse${id}" class="collapse" role="tabpanel" aria-labelledby="heading${id}">
 		        <div class="card-block">
-		          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+		         <h4>Call Script</h4>
+		         <p>
+							${currentAction.script}
+		         </p>
+		         <div class="action-buttons">
+							<button>Spoke</button>
+							<button>Left Voicemail</button>
+							<button>Emailed</button>
+		         </div>
+		         <p>${currentAction.advice}</p>
 		        </div>
 		      </div>
 		    </div>
