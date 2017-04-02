@@ -89,6 +89,13 @@ a:hover {
   margin: 1rem auto;
 }
 
+.flash-message {
+	display: none;
+	font-weight: 600;
+	color: #304269;
+	padding: 3px;
+}
+
 .action-buttons .btn {
 	width: 135px;
 	background: #304269;
