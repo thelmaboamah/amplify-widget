@@ -19,6 +19,7 @@ $(document).ready(function(){
 		var id = 0;
 		var message = ["Way to go!", "Nice work!", "Good job!"];
 		var randMessage;
+
 		
 
 		for (var action in snapshot) {
@@ -73,10 +74,13 @@ $(document).ready(function(){
 		}	
 	
 		$("#accordion").on("click", ".action-buttons .btn", function(e) {
-			randMessage = message[Math.floor(Math.random() * message.length)]
-			console.log(randMessage)
-			var fMessage = $(this).parent().prev(".flash-message")
-			fMessage.css("display", "show").delay(800).hide();
+			randMessage= message[Math.floor(Math.random() * message.length)];
+			var fmessage = $(this).parent().prev(".flash-message")
+			fmessage.text(randMessage).show();
+			setTimeout(function(){
+				fmessage.hide();
+			},1200);
+			
 		})
 
 
