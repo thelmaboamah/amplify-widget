@@ -30,10 +30,10 @@ $(document).ready(function(){
 		    <div class="card">
 		      <div class="card-header" role="tab" id="heading${++id}">
 	          <div class="row" data-toggle="collapse" data-parent="#accordion" href="#collapse${id}" aria-controls="collapse${id}">
-							<div class="col-md-1">
+							<div class="col-md-1 phone">
 								<i class="fa fa-phone" aria-hidden="true"></i>
 							</div>
-							<div class="col-md-10">
+							<div class="col-md-10 lead">
 								<p class="pre-title">
 									${currentAction.verbPreTitle}
 								</p>
@@ -41,7 +41,7 @@ $(document).ready(function(){
 									${currentAction.verbTitle}
 								</p>
 							</div>
-							<div class="col-md-1">
+							<div class="col-md-1 chevron">
 								<i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
 							</div>
 
@@ -56,9 +56,9 @@ $(document).ready(function(){
 							${currentAction.script}
 		         </p>
 		         <div class="action-buttons">
-							<button>Spoke</button>
-							<button>Left Voicemail</button>
-							<button>Emailed</button>
+							<button class="btn">Spoke</button>
+							<button class="btn">Left Voicemail</button>
+							<button class="btn">Emailed</button>
 		         </div>
 		         <p>${currentAction.advice}</p>
 		        </div>
