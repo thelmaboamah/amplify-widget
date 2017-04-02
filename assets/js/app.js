@@ -1,13 +1,36 @@
-data = {
-	action: "Fight for an independent council to investigate the administration's Russian ties.",
-	senator: "Sen. Feinstein",
-	office: {
-		sf: "(415) 393-0707",
-		dc: "(202) 224-3841",
-		la: "(310) 914-7300"
-	},
-	message: callScript
-}
+$(document).ready(function(){
+	// Initialize Firebase
+	var config = {
+	 apiKey: "AIzaSyBrqBQm5A-fpj5iF7IGt51tK206Ud4aEGg",
+	 authDomain: "civictools-hackathon.firebaseapp.com",
+	 databaseURL: "https://civictools-hackathon.firebaseio.com",
+	 projectId: "civictools-hackathon",
+	 storageBucket: "civictools-hackathon.appspot.com",
+	 messagingSenderId: "362076091004"
+	};
+	firebase.initializeApp(config);
 
-callScript = "Hi, my name is ______, I'm a local constituent and also a member of Indivisible SF. My zip code is _____.\n I'm asking the Senator, since she is a member of the Intelligence committee, to push for a 9/11-type commission into the Russian hacks and influence on the presidential campaign, as well as ties to the Trump administration. Mike Flynn's resignation confirms that it is critical for the Intelligence committee to step up and exercise oversight.\n \n Thank you for your time.";
+	var dbRef = firebase.database().ref().child('actions');
 
+	dbRef.on('value', snap => {
+
+		var snapshot = snap.val();
+
+		for (var action in snapshot) {
+		  var currentAction;
+		  
+		  if (snapshot.hasOwnProperty(action)) {
+		     currentAction = snapshot[action]
+
+		    $("#actions").append(`<p>${currentAction.bodyMarkdown}</p>`)
+		    
+
+
+
+
+		  }
+		}
+		
+	});
+	
+});
