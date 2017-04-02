@@ -52,7 +52,7 @@ $(document).ready(function(){
 		      <div id="collapse${id}" class="collapse" role="tabpanel" aria-labelledby="heading${id}">
 		        <div class="card-block">
 		         <h4>Call Script</h4>
-		         <p>
+		         <p class="script">
 							${currentAction.script}
 		         </p>
 		         <div class="action-buttons">
@@ -60,27 +60,15 @@ $(document).ready(function(){
 							<button class="btn">Left Voicemail</button>
 							<button class="btn">Emailed</button>
 		         </div>
-		         <p>${currentAction.advice}</p>
+		         <p class="advice">${currentAction.advice}</p>
 		        </div>
 		      </div>
 		    </div>
-
 		    `
-
-
-
-
-
 		    $("#accordion").append(actionDiv);
-		    
-
-
-
 
 		  }
-		}
-
-		
+		}	
 	});
-	
+		
 });

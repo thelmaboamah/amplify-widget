@@ -7,6 +7,30 @@ h1, h2, h3, h4, h5, h6 {
 	color: #304269;
 }
 
+h4 {
+	font-size: 1.3rem;
+}
+
+a {
+	color: inherit;
+}
+
+a:hover {
+	text-decoration: none;
+	font-weight: bold;
+	color: #304269;
+}
+
+.container {
+	padding: 15px;
+}
+
+.top-heading {
+	margin-bottom: 12px;
+}
+
+/**** Sidebar ****/
+
 .contact-info, ul {
 	list-style: none;
 	padding-left: 0px;
@@ -70,4 +94,10 @@ h1, h2, h3, h4, h5, h6 {
 	background: #304269;
 	color: #fff;
 	cursor: pointer;
+}
+
+.advice {
+	background: #e8e8e8;
+	padding: 8px;
+  border-radius: 5px;
 }
